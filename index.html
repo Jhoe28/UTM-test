@@ -615,7 +615,6 @@
 				function getUTMParams() {
 				    const params = new URLSearchParams(window.location.search);
 				
-				    // Map URL params to Zoho fields
 				    const utmFields = {
 				        utm_source: 'LEADCF5',
 				        utm_medium: 'LEADCF4',
@@ -625,17 +624,18 @@
 				    };
 				
 				    for (let param in utmFields) {
-				        if (params.has(param)) {
-				            const field = document.getElementById(utmFields[param]);
-				            if (field) {
-				                field.value = params.get(param);
-				            }
+				        const field = document.getElementById(utmFields[param]);
+				
+				        if (field && params.has(param)) {
+				            field.value = params.get(param);
 				        }
 				    }
 				}
 				
-				// Run when page loads
-				document.addEventListener("DOMContentLoaded", getUTMParams);
+				// 🔥 Run AFTER everything (this is the fix)
+				window.onload = function () {
+				    getUTMParams();
+				};
 			</script>
 		</form>
 	</div>
