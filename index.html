@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Note :
+	<!-- Note :
    - You can modify the font style and form style to suit your website. 
    - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
    - The Mandatory check script can modified as to suit your business needs. 
@@ -14,462 +14,630 @@
 <div id = 'crmWebToEntityForm' class = 'zcwf_lblLeft crmWebToEntityForm' style = 'background-color: white;color: black;max-width: 600px;'>
 	<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
 		<META HTTP-EQUIV = 'content-type' CONTENT = 'text/html;charset=UTF-8'>
-			<form id = 'webform7257335000001002261' action = 'https://crm.zoho.com/crm/WebToLeadForm' name = WebToLeads7257335000001002261 method = 'POST' onSubmit = 'javascript:document.charset="UTF-8"; return checkMandatory7257335000001002261()' accept-charset = 'UTF-8'>
-				<input type = 'text' style = 'display:none;' name = 'xnQsjsdp' value = '2dc7b2ed0c0339bfe5496f0c899769b841c473fc9bf6bc95da33e039933179a0'>
+			<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js'>
+		</script>
+		<style>
+			.wf_customMessageBox{
+				font-family: Arial, Helvetica, sans-serif;
+				color:  #132C14;
+				background:   #F5FAF5;
+				box-shadow: 0 2px 6px 0 rgba(0,0,0,0.25);
+				max-width: 90%;
+				width: max-content;
+				word-break: break-word;
+				z-index: 11000;
+				border-radius: 6px;
+				border: 1px solid  #A9D3AB;
+				min-width: 100px;
+				padding: 10px 15px;
+				display: flex;
+				align-items: center;
+				position: fixed;
+				top: 20px;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+			.wf_customCircle{
+				position: relative;
+				background-color:  #12AA67;
+				border-radius: 100%;
+				width: 20px;
+				height: 20px;
+				flex: none;
+				margin-right: 7px;
+			}
+			.wf_customCheckMark{
+				box-sizing: unset !important;
+				position: absolute;
+				transform: rotate(45deg)translate(-50%, -50%);
+				left: 6px;
+				top: 9px;
+				height: 8px;
+				width: 3px;
+				border-bottom: 2px solid  #fff;
+				border-right: 2px solid  #fff;
+			}
+			.wf_customClose{
+				box-sizing: border-box;
+				position: relative;
+				width: 18px;
+				height: 18px;
+			}
+			.wf_customClose::after,
+.wf_customClose::before{
+				content: '';
+				display: block;
+				box-sizing: border-box;
+				position: absolute;
+				width: 12px;
+				height: 1.5px;
+				background:  #616E88;
+				transform: rotate(45deg);
+				border-radius: 5px;
+				top: 8px;
+				left}
+			.wf_customClose::after{
+				transform: rotate(-45deg)}
+		</style>
+		<div class = 'wf_customMessageBox' id = 'wf_splash' style = 'display:none'>
+			<div class = 'wf_customCircle'>
+				<div class = 'wf_customCheckMark'>
+				</div>
+			</div>
+			<span id = 'wf_splash_info'>
+			</span>
+		</p>
+	</div>
+	<form id = 'webform67135000000372003' name = WebToLeads67135000000372003 accept-charset = 'UTF-8'>
+		<input type = 'text' style = 'display:none;' name = 'xnQsjsdp' value = 'a000b1234537112a4e942207439f841cb723f60cd8999b60d29d52149ea97423'>
+		</input>
+		<input type = 'hidden' name = 'zc_gad' id = 'zc_gad' value = ''>
+		</input>
+		<input type = 'text' style = 'display:none;' name = 'xmIwtLD' value = 'a561bd7b136c7c9ad8ddfdc93559cf17d4e1bcaca272838bf87e5c2bb285a68dd5d7a78196ce9d011bb25e8c47105b3c'>
+		</input>
+		<input type = 'text' style = 'display:none;' name = 'actionType' value = 'TGVhZHM='>
+		</input>
+		<input type = 'text' style = 'display:none;' name = 'returnURL' value = 'null'>
+		</input>
+		<!-- Do not remove this code. -->
+		<input type = 'text' style = 'display:none;' id = 'ldeskuid' name = 'ldeskuid'>
+		</input>
+		<input type = 'text' style = 'display:none;' id = 'LDTuvid' name = 'LDTuvid'>
+		</input>
+		<!-- Do not remove this code. -->
+		<style>
+			html,body{
+				margin: 0px;
+			}
+			.formsubmit.zcwf_button{
+				color: white !important;
+				background: transparent linear-gradient(0deg, #0279FF 0%, #00A3F3 100%);
+			}
+			#crmWebToEntityForm.zcwf_lblLeft{
+				width: 100%;
+				padding: 25px;
+				margin: 0 auto;
+				box-sizing: border-box;
+			}
+			#crmWebToEntityForm.zcwf_lblLeft *{
+				box-sizing: border-box;
+			}
+			#crmWebToEntityForm {text-align: left;
+			}
+			#crmWebToEntityForm *{
+			direction: ltr;
+			}
+			.zcwf_lblLeft .zcwf_title{
+			word-wrap: break-word;
+			padding: 0px 6px 10px;
+			font-weight: bold }
+			.zcwf_lblLeft.cpT_primaryBtn:hover{
+			background: linear-gradient(#02acff 0,#006be4 100%)no-repeat padding-box !important;
+			box-shadow: 0 -2px 0 0  #0159b9 inset !important;
+			border: 0 !important;
+			color:  #fff !important;
+			outline: 0 !important;
+			}
+			.zcwf_lblLeft .zcwf_col_fld input[ type  = text], input[ type  = password], .zcwf_lblLeft .zcwf_col_fld textarea{
+			width: 60%;
+			border: 1px solid  #c0c6cc !important;
+			resize: vertical;
+			border-radius: 2px;
+			float: left;
+			}
+			.zcwf_lblLeft .zcwf_col_lab{
+			width: 30%;
+			word-break: break-word;
+			padding: 0px 6px 0px;
+			margin-right: 10px;
+			margin-top: 5px;
+			float: left;
+			min-height: 1px;
+			}
+			.zcwf_lblLeft .zcwf_col_fld{
+			float: left;
+			width: 68%;
+			padding: 0px 6px 0px;
+			position: relative;
+			margin-top: 5px;
+			}
+			.zcwf_lblLeft .zcwf_privacy {padding: 6px;
+			}
+			.zcwf_lblLeft .wfrm_fld_dpNn {display: none;
+			}
+			.dIB {display: inline-block;
+			}
+			.zcwf_lblLeft .zcwf_col_fld_slt{
+			width: 60%;
+			border: 1px solid  #ccc;
+			background:  #fff;
+			border-radius: 4px;
+			font-size: 12px;
+			float: left;
+			resize: vertical;
+			padding: 2px 5px;
+			}
+			.zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after{
+			content: '';
+			display: table;
+			clear: both;
+			}
+			.zcwf_lblLeft .zcwf_col_help{
+			float: left;
+			margin-left: 7px;
+			font-size: 12px;
+			max-width: 35%;
+			word-break: break-word;
+			}
+			.zcwf_lblLeft .zcwf_help_icon{
+			cursor: pointer;
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			background:  #fff;
+			border: 1px solid  #c0c6cc;
+			color:  #c1c1c1;
+			text-align: center;
+			font-size: 11px;
+			line-height: 16px;
+			font-weight: bold;
+			border-radius: 50%;
+			}
+			.zcwf_lblLeft .zcwf_row {margin: 15px 0px;
+			}
+			.zcwf_lblLeft .formsubmit{
+			margin-right: 5px;
+			cursor: pointer;
+			color:  #313949;
+			font-size: 12px;
+			}
+			.zcwf_lblLeft .zcwf_privacy_txt{
+			width: 90%;
+			color: rgb(0, 0, 0);
+			font-size: 12px;
+			font-family: Arial;
+			display: inline-block;
+			vertical-align: top;
+			color:  #313949;
+			padding-top: 2px;
+			margin-left: 6px;
+			}
+			.zcwf_lblLeft .zcwf_button{
+			font-size: 12px;
+			color:  #313949;
+			border: 1px solid  #c0c6cc;
+			padding: 3px 9px;
+			border-radius: 4px;
+			cursor: pointer;
+			max-width: 120px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			}
+			.zcwf_lblLeft .zcwf_tooltip_over{
+			position: relative;
+			}
+			.zcwf_lblLeft .zcwf_tooltip_ctn{
+			position: absolute;
+			background:  #dedede;
+			padding: 3px 6px;
+			top: 3px;
+			border-radius: 4px;
+			word-break: break-word;
+			min-width: 100px;
+			max-width: 150px;
+			color:  #313949;
+			z-index: 100;
+			}
+			.zcwf_lblLeft .zcwf_ckbox{
+			float: left;
+			}
+			.zcwf_lblLeft .zcwf_file{
+			width: 55%;
+			box-sizing: border-box;
+			float: left;
+			}
+			.cBoth:after{
+			content: '';
+			display: block;
+			clear: both;
+			}
+			@media all and  (max-width: 600px){
+			.zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld{
+			width: auto;
+			float: none !important;
+			}
+			.zcwf_lblLeft .zcwf_col_help {width: 40%;
+			}
+			}
+		</style>
+		<div class = 'zcwf_title' style = 'max-width: 600px;color: black; font-family:Arial;'>Demo Request Form</div>
+		<div class = 'zcwf_row'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'First_Name'>First Name
+					<span style = 'color:red;'>*</span>
+				</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'First_Name' aria-required = 'true' aria-label = 'First Name' name = 'First Name' aria-valuemax = '40' maxlength = '40'>
 				</input>
-				<input type = 'hidden' name = 'zc_gad' id = 'zc_gad' value = ''>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'Last_Name'>Last Name
+					<span style = 'color:red;'>*</span>
+				</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'Last_Name' aria-required = 'true' aria-label = 'Last Name' name = 'Last Name' aria-valuemax = '80' maxlength = '80'>
 				</input>
-				<input type = 'text' style = 'display:none;' name = 'xmIwtLD' value = '8ced0cd8564212d4207eb10a0122cdc9f7db6a42570acdb5cba7150f045b3138e9b4e3d4b3afabd59b300f39a7dd9564'>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'Email'>Email Address
+					<span style = 'color:red;'>*</span>
+				</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' ftype = 'email' autocomplete = 'false' id = 'Email' aria-required = 'true' aria-label = 'Email' name = 'Email' aria-valuemax = '100' crmlabel = '' maxlength = '100'>
 				</input>
-				<input type = 'text' style = 'display:none;' name = 'actionType' value = 'TGVhZHM='>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'Phone'>Phone Number
+					<span style = 'color:red;'>*</span>
+				</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'Phone' aria-required = 'true' aria-label = 'Phone' name = 'Phone' aria-valuemax = '30' maxlength = '30'>
 				</input>
-				<input type = 'text' style = 'display:none;' name = 'returnURL' value = 'https&#x3a;&#x2f;&#x2f;jhoe28.github.io&#x2f;UTM-test&#x2f;'>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'LEADCF10'>Property Type</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<select class = 'zcwf_col_fld_slt' role = 'combobox' aria-expanded = 'false' aria-haspopup = 'listbox' id = 'LEADCF10' onChange = 'addAriaSelected67135000000372003()' aria-required = 'false' aria-label = 'LEADCF10' name = 'LEADCF10'>
+					<option value = '-None-'>-None-</option>
+					<option value = 'Residential'>Residential</option>
+					<option value = 'Commercial'>Commercial</option>
+					<option value = 'Industrial'>Industrial</option>
+					<option value = 'Mixed&#x20;Use'>Mixed Use</option>
+					<option value = 'Hospitality'>Hospitality</option>
+					<option value = 'Healthcare'>Healthcare</option>
+					<option value = 'Other'>Other</option>
+				</select>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'Company'>Company Name
+					<span style = 'color:red;'>*</span>
+				</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'Company' aria-required = 'true' aria-label = 'Company' name = 'Company' aria-valuemax = '200' maxlength = '200'>
 				</input>
-				<!-- Do not remove this code. -->
-				<input type = 'text' style = 'display:none;' id = 'ldeskuid' name = 'ldeskuid'>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row wfrm_fld_dpNn'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'Lead_Source'>Lead Source</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<select class = 'zcwf_col_fld_slt' role = 'combobox' aria-expanded = 'false' aria-haspopup = 'listbox' id = 'Lead_Source' onChange = 'addAriaSelected67135000000372003()' aria-required = 'false' aria-label = 'Lead Source' name = 'Lead Source'>
+					<option value = '-None-'>-None-</option>
+					<option value = 'SalesIQ&#x20;Chat'>SalesIQ Chat</option>
+					<option selected value = 'Demo&#x20;Request&#x20;Form'>Demo Request Form</option>
+					<option value = 'Email&#x20;Campaigns'>Email Campaigns</option>
+					<option value = 'Referrals'>Referrals</option>
+					<option value = 'Outbound&#x20;sales'>Outbound sales</option>
+					<option value = 'Partners'>Partners</option>
+					<option value = 'Events'>Events</option>
+					<option value = 'X&#x20;&#x28;Twitter&#x29;'>X &#x28;Twitter&#x29;</option>
+					<option value = 'Facebook'>Facebook</option>
+				</select>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row wfrm_fld_dpNn'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'LEADCF5'>UTM Source</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'LEADCF5' aria-required = 'false' aria-label = 'LEADCF5' name = 'LEADCF5' aria-valuemax = '255' maxlength = '255' value = 'Unknown'>
 				</input>
-				<input type = 'text' style = 'display:none;' id = 'LDTuvid' name = 'LDTuvid'>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row wfrm_fld_dpNn'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'LEADCF4'>UTM Medium</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'LEADCF4' aria-required = 'false' aria-label = 'LEADCF4' name = 'LEADCF4' aria-valuemax = '255' maxlength = '255' value = 'Unknown'>
 				</input>
-				<!-- Do not remove this code. -->
-				<style>
-					html,body{
-						margin: 0px;
-					}
-					.formsubmit.zcwf_button{
-						color: white !important;
-						background: transparent linear-gradient(0deg, #0279FF 0%, #00A3F3 100%);
-					}
-					#crmWebToEntityForm.zcwf_lblLeft{
-						width: 100%;
-						padding: 25px;
-						margin: 0 auto;
-						box-sizing: border-box;
-					}
-					#crmWebToEntityForm.zcwf_lblLeft *{
-						box-sizing: border-box;
-					}
-					#crmWebToEntityForm {text-align: left;
-					}
-					#crmWebToEntityForm *{
-					direction: ltr;
-					}
-					.zcwf_lblLeft .zcwf_title{
-					word-wrap: break-word;
-					padding: 0px 6px 10px;
-					font-weight: bold }
-					.zcwf_lblLeft.cpT_primaryBtn:hover{
-					background: linear-gradient(#02acff 0,#006be4 100%)no-repeat padding-box !important;
-					box-shadow: 0 -2px 0 0  #0159b9 inset !important;
-					border: 0 !important;
-					color:  #fff !important;
-					outline: 0 !important;
-					}
-					.zcwf_lblLeft .zcwf_col_fld input[ type  = text], input[ type  = password], .zcwf_lblLeft .zcwf_col_fld textarea{
-					width: 60%;
-					border: 1px solid  #c0c6cc !important;
-					resize: vertical;
-					border-radius: 2px;
-					float: left;
-					}
-					.zcwf_lblLeft .zcwf_col_lab{
-					width: 30%;
-					word-break: break-word;
-					padding: 0px 6px 0px;
-					margin-right: 10px;
-					margin-top: 5px;
-					float: left;
-					min-height: 1px;
-					}
-					.zcwf_lblLeft .zcwf_col_fld{
-					float: left;
-					width: 68%;
-					padding: 0px 6px 0px;
-					position: relative;
-					margin-top: 5px;
-					}
-					.zcwf_lblLeft .zcwf_privacy {padding: 6px;
-					}
-					.zcwf_lblLeft .wfrm_fld_dpNn {display: none;
-					}
-					.dIB {display: inline-block;
-					}
-					.zcwf_lblLeft .zcwf_col_fld_slt{
-					width: 60%;
-					border: 1px solid  #ccc;
-					background:  #fff;
-					border-radius: 4px;
-					font-size: 12px;
-					float: left;
-					resize: vertical;
-					padding: 2px 5px;
-					}
-					.zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after{
-					content: '';
-					display: table;
-					clear: both;
-					}
-					.zcwf_lblLeft .zcwf_col_help{
-					float: left;
-					margin-left: 7px;
-					font-size: 12px;
-					max-width: 35%;
-					word-break: break-word;
-					}
-					.zcwf_lblLeft .zcwf_help_icon{
-					cursor: pointer;
-					width: 16px;
-					height: 16px;
-					display: inline-block;
-					background:  #fff;
-					border: 1px solid  #c0c6cc;
-					color:  #c1c1c1;
-					text-align: center;
-					font-size: 11px;
-					line-height: 16px;
-					font-weight: bold;
-					border-radius: 50%;
-					}
-					.zcwf_lblLeft .zcwf_row {margin: 15px 0px;
-					}
-					.zcwf_lblLeft .formsubmit{
-					margin-right: 5px;
-					cursor: pointer;
-					color:  #313949;
-					font-size: 12px;
-					}
-					.zcwf_lblLeft .zcwf_privacy_txt{
-					width: 90%;
-					color: rgb(0, 0, 0);
-					font-size: 12px;
-					font-family: Arial;
-					display: inline-block;
-					vertical-align: top;
-					color:  #313949;
-					padding-top: 2px;
-					margin-left: 6px;
-					}
-					.zcwf_lblLeft .zcwf_button{
-					font-size: 12px;
-					color:  #313949;
-					border: 1px solid  #c0c6cc;
-					padding: 3px 9px;
-					border-radius: 4px;
-					cursor: pointer;
-					max-width: 120px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					white-space: nowrap;
-					}
-					.zcwf_lblLeft .zcwf_tooltip_over{
-					position: relative;
-					}
-					.zcwf_lblLeft .zcwf_tooltip_ctn{
-					position: absolute;
-					background:  #dedede;
-					padding: 3px 6px;
-					top: 3px;
-					border-radius: 4px;
-					word-break: break-word;
-					min-width: 100px;
-					max-width: 150px;
-					color:  #313949;
-					z-index: 100;
-					}
-					.zcwf_lblLeft .zcwf_ckbox{
-					float: left;
-					}
-					.zcwf_lblLeft .zcwf_file{
-					width: 55%;
-					box-sizing: border-box;
-					float: left;
-					}
-					.cBoth:after{
-					content: '';
-					display: block;
-					clear: both;
-					}
-					@media all and  (max-width: 600px){
-					.zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld{
-					width: auto;
-					float: none !important;
-					}
-					.zcwf_lblLeft .zcwf_col_help {width: 40%;
-					}
-					}
-				</style>
-				<div class = 'zcwf_title' style = 'max-width: 600px;color: black; font-family:Arial;'>UTM TEST</div>
-				<div class = 'zcwf_row'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'Last_Name'>Last Name
-							<span style = 'color:red;'>*</span>
-						</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<input type = 'text' id = 'Last_Name' aria-required = 'true' aria-label = 'Last Name' name = 'Last Name' aria-valuemax = '80' maxlength = '80'>
-						</input>
-						<div class = 'zcwf_col_help'>
-						</div>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row wfrm_fld_dpNn'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'LEADCF7'>UTM Campaign</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'LEADCF7' aria-required = 'false' aria-label = 'LEADCF7' name = 'LEADCF7' aria-valuemax = '255' maxlength = '255' value = 'Unknown'>
+				</input>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row wfrm_fld_dpNn'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'LEADCF6'>UTM Content</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'LEADCF6' aria-required = 'false' aria-label = 'LEADCF6' name = 'LEADCF6' aria-valuemax = '255' maxlength = '255' value = 'Unknown'>
+				</input>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<div class = 'zcwf_row wfrm_fld_dpNn'>
+			<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
+				<label for = 'LEADCF9'>UTM Term</label>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'text' id = 'LEADCF9' aria-required = 'false' aria-label = 'LEADCF9' name = 'LEADCF9' aria-valuemax = '255' maxlength = '255' value = 'Unknown'>
+				</input>
+				<div class = 'zcwf_col_help'>
+				</div>
+			</div>
+		</div>
+		<input type = 'text' type = 'hidden' style = 'display: none;' name = 'aG9uZXlwb3Q' value = ''/>
+		<div class = 'zcwf_row'>
+			<div class = 'zcwf_col_lab'>
+			</div>
+			<div class = 'zcwf_col_fld'>
+				<input type = 'submit' id = 'formsubmit' role = 'button' class = 'formsubmit zcwf_button' value = 'Submit' aria-label = 'Submit' title = 'Submit'>
+					<input type = 'reset' class = 'zcwf_button' role = 'button' name = 'reset' value = 'Reset' aria-label = 'Reset' title = 'Reset'>
 					</div>
 				</div>
-				<div class = 'zcwf_row wfrm_fld_dpNn'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'LEADCF6'>UTM medium</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<input type = 'text' id = 'LEADCF6' aria-required = 'false' aria-label = 'LEADCF6' name = 'LEADCF6' aria-valuemax = '255' maxlength = '255' value = 'unknown'>
-						</input>
-						<div class = 'zcwf_col_help'>
-						</div>
-					</div>
-				</div>
-				<div class = 'zcwf_row wfrm_fld_dpNn'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'LEADCF7'>UTM Term</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<input type = 'text' id = 'LEADCF7' aria-required = 'false' aria-label = 'LEADCF7' name = 'LEADCF7' aria-valuemax = '255' maxlength = '255' value = 'unknown'>
-						</input>
-						<div class = 'zcwf_col_help'>
-						</div>
-					</div>
-				</div>
-				<div class = 'zcwf_row wfrm_fld_dpNn'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'LEADCF3'>UTM campaign</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<input type = 'text' id = 'LEADCF3' aria-required = 'false' aria-label = 'LEADCF3' name = 'LEADCF3' aria-valuemax = '255' maxlength = '255' value = 'unknown'>
-						</input>
-						<div class = 'zcwf_col_help'>
-						</div>
-					</div>
-				</div>
-				<div class = 'zcwf_row wfrm_fld_dpNn'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'LEADCF5'>UTM Content</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<input type = 'text' id = 'LEADCF5' aria-required = 'false' aria-label = 'LEADCF5' name = 'LEADCF5' aria-valuemax = '255' maxlength = '255' value = 'unknown'>
-						</input>
-						<div class = 'zcwf_col_help'>
-						</div>
-					</div>
-				</div>
-				<div class = 'zcwf_row wfrm_fld_dpNn'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'LEADCF4'>UTM Source</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<input type = 'text' id = 'LEADCF4' aria-required = 'false' aria-label = 'LEADCF4' name = 'LEADCF4' aria-valuemax = '255' maxlength = '255' value = 'unknown'>
-						</input>
-						<div class = 'zcwf_col_help'>
-						</div>
-					</div>
-				</div>
-				<div class = 'zcwf_row'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'Lead_Status'>Lead Status</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<select class = 'zcwf_col_fld_slt' role = 'combobox' aria-expanded = 'false' aria-haspopup = 'listbox' id = 'Lead_Status' onChange = 'addAriaSelected7257335000001002261()' aria-required = 'false' aria-label = 'Lead Status' name = 'Lead Status'>
-							<option value = '-None-'>-None-</option>
-							<option value = 'New&#x20;Lead'>New Lead</option>
-							<option value = 'Attempted&#x20;Contact'>Attempted Contact</option>
-							<option value = 'Contacted'>Contacted</option>
-							<option value = 'Engaged'>Engaged</option>
-							<option value = 'MQL&#x28;Marketing&#x20;Qualified&#x20;Leads&#x29;'>MQL&#x28;Marketing Qualified Leads&#x29;</option>
-							<option value = 'SQL&#x28;Sales&#x20;Qualified&#x20;Lead&#x29;'>SQL&#x28;Sales Qualified Lead&#x29;</option>
-							<option value = 'Demo&#x20;requested'>Demo requested</option>
-							<option value = 'Demo&#x20;Scheduled'>Demo Scheduled</option>
-							<option value = 'Demo&#x20;Completed'>Demo Completed</option>
-							<option value = 'Pre-Qualified'>Pre-Qualified</option>
-							<option value = 'Lost&#x20;Lead'>Lost Lead</option>
-							<option value = 'Not&#x20;Qualified'>Not Qualified</option>
-							<option value = 'Junk&#x20;Lead'>Junk Lead</option>
-							<option value = 'Web&#x20;visitors'>Web visitors</option>
-						</select>
-						<div class = 'zcwf_col_help'>
-						</div>
-					</div>
-				</div>
-				<div class = 'zcwf_row'>
-					<div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-						<label for = 'Lead_Source'>Lead Source</label>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<select class = 'zcwf_col_fld_slt' role = 'combobox' aria-expanded = 'false' aria-haspopup = 'listbox' id = 'Lead_Source' onChange = 'addAriaSelected7257335000001002261()' aria-required = 'false' aria-label = 'Lead Source' name = 'Lead Source'>
-							<option value = '-None-'>-None-</option>
-							<option value = 'Advertisement'>Advertisement</option>
-							<option value = 'Cold&#x20;Call'>Cold Call</option>
-							<option value = 'Employee&#x20;Referral'>Employee Referral</option>
-							<option value = 'External&#x20;Referral'>External Referral</option>
-							<option value = 'Online&#x20;Store'>Online Store</option>
-							<option value = 'X&#x20;&#x28;Twitter&#x29;'>X &#x28;Twitter&#x29;</option>
-							<option value = 'Facebook'>Facebook</option>
-							<option value = 'Partner'>Partner</option>
-							<option value = 'Public&#x20;Relations'>Public Relations</option>
-							<option value = 'Sales&#x20;Email&#x20;Alias'>Sales Email Alias</option>
-							<option value = 'Seminar&#x20;Partner'>Seminar Partner</option>
-							<option value = 'Internal&#x20;Seminar'>Internal Seminar</option>
-							<option value = 'Trade&#x20;Show'>Trade Show</option>
-							<option value = 'Webform'>Webform</option>
-							<option value = 'Website'>Website</option>
-							<option value = 'Chat'>Chat</option>
-						</select>
-						<div class = 'zcwf_col_help'>
-						</div>
-					</div>
-				</div>
-				<input type = 'text' type = 'hidden' style = 'display: none;' name = 'aG9uZXlwb3Q' value = ''/>
-				<div class = 'zcwf_row'>
-					<div class = 'zcwf_col_lab'>
-					</div>
-					<div class = 'zcwf_col_fld'>
-						<input type = 'submit' id = 'formsubmit' role = 'button' class = 'formsubmit zcwf_button' value = 'Submit' aria-label = 'Submit' title = 'Submit'>
-							<input type = 'reset' class = 'zcwf_button' role = 'button' name = 'reset' value = 'Reset' aria-label = 'Reset' title = 'Reset'>
-							</div>
-						</div>
-						<script>
-							function addAriaSelected7257335000001002261(){
-								var optionElem = event.target;
-								var previousSelectedOption = optionElem.querySelector('[aria-selected=true]');
-								if (previousSelectedOption) {
-									previousSelectedOption.removeAttribute('aria-selected');
+				<script>
+					function addAriaSelected67135000000372003(){
+						var optionElem = event.target;
+						var previousSelectedOption = optionElem.querySelector('[aria-selected=true]');
+						if (previousSelectedOption) {
+							previousSelectedOption.removeAttribute('aria-selected');
+						}
+						optionElem.querySelectorAll('option') [optionElem.selectedIndex] .ariaSelected = 'true';
+					}
+					function validateEmail67135000000372003(){
+						var form = document.forms['WebToLeads67135000000372003'];
+						var emailFld = form.querySelectorAll('[ftype=email]');
+						var i;
+						for(i = 0; i < emailFld.length; i++ ) {
+							var emailVal = emailFld[i].value;
+							if ((emailVal.replace (/^\s+|\s+$/g,'') ) .length != 0) {
+								var atpos = emailVal.indexOf('@');
+								var dotpos = emailVal.lastIndexOf('.');
+								if(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+									alert('Please enter a valid email address. ');
+									emailFld[i].focus();
+									return false;
 								}
-								optionElem.querySelectorAll('option') [optionElem.selectedIndex] .ariaSelected = 'true';
 							}
-							function checkMandatory7257335000001002261(){
-								var mndFileds = new Array('Last Name');
-								var fldLangVal = new Array('Last\x20Name');
-								for (i = 0; i < mndFileds.length; i++ ) {
-									var fieldObj = document.forms['WebToLeads7257335000001002261'] [mndFileds[i]];
-									if (fieldObj) {
-										if(((fieldObj.value) .replace (/^\s+|\s+$/g,'') ) .length == 0) {
-											if (fieldObj.type == 'file') {
-												alert('Please select a file to upload.');
-												fieldObj.focus();
-												return false;
-											}
-											alert(fldLangVal[i] + ' cannot be empty.');
-											fieldObj.focus();
-											return false;
-										} else if (fieldObj.nodeName == 'SELECT') {
-											if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
-												alert(fldLangVal[i] + ' cannot be none.');
-												fieldObj.focus();
-												return false;
-											}
-										} else if (fieldObj.type == 'checkbox') {
-											if (fieldObj.checked == false) {
-												alert('Please accept  ' + fldLangVal[i]);
-												fieldObj.focus();
-												return false;
-											}
-										}
-										try{
-											if (fieldObj.name == 'Last Name') {
-												name = fieldObj.value;
-											}
-										} catch (e){}
+						}
+						return true;
+					}
+					function checkMandatory67135000000372003(){
+						var mndFileds = new Array('Company', 'First Name', 'Last Name', 'Email', 'Phone');
+						var fldLangVal = new Array('Company\x20Name', 'First\x20Name', 'Last\x20Name', 'Email\x20Address', 'Phone\x20Number');
+						for (i = 0; i < mndFileds.length; i++ ) {
+							var fieldObj = document.forms['WebToLeads67135000000372003'] [mndFileds[i]];
+							if (fieldObj) {
+								if(((fieldObj.value) .replace (/^\s+|\s+$/g,'') ) .length == 0) {
+									if (fieldObj.type == 'file') {
+										alert('Please select a file to upload.');
+										fieldObj.focus();
+										return false;
+									}
+									alert(fldLangVal[i] + ' cannot be empty.');
+									fieldObj.focus();
+									return false;
+								} else if (fieldObj.nodeName == 'SELECT') {
+									if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+										alert(fldLangVal[i] + ' cannot be none.');
+										fieldObj.focus();
+										return false;
+									}
+								} else if (fieldObj.type == 'checkbox') {
+									if (fieldObj.checked == false) {
+										alert('Please accept  ' + fldLangVal[i]);
+										fieldObj.focus();
+										return false;
 									}
 								}
-								trackVisitor7257335000001002261();
-								var urlparams = new URLSearchParams(window.location.search);
-								if (urlparams.has ('service') && (urlparams.get ('service') === 'smarturl') ) {
-									var webform = document.getElementById('webform7257335000001002261');
-									var service = urlparams.get('service');
-									var smarturlfield = document.createElement('input');
-									smarturlfield.setAttribute('type', 'hidden');
-									smarturlfield.setAttribute('value', service);
-									smarturlfield.setAttribute('name', 'service');
-									webform.appendChild(smarturlfield);
-								}
-								document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
-							}
-							function tooltipShow7257335000001002261(el){
-								var tooltip = el.nextElementSibling;
-								var tooltipDisplay = tooltip.style.display;
-								if (tooltipDisplay == 'none') {
-									var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
-									for (i = 0; i < allTooltip.length; i++ ) {
-										allTooltip[i].style.display = 'none';
-									}
-									tooltip.style.display = 'block';
-								} else {
-									tooltip.style.display = 'none';
-								}
-							}
-						</script>
-						<script type = 'text/javascript' id = 'VisitorTracking'>
-							var $zoho = $zoho || {};
-							$zoho.salesiq = $zoho.salesiq || {
-								widgetcode: 'siq509b1785ee493dea9cfdd2b09d050c74f4ecc6bb3d34f97860eb71a2dce86fd2',
-								values: {},
-								ready: function(){}
-							};
-							var d = document;
-							s = d.createElement('script');
-							s.type = 'text/javascript';
-							s.id = 'zsiqscript';
-							s.defer = true;
-							s.src = 'https://salesiq.zoho.com/widget';
-							t = d.getElementsByTagName('script')[0];
-							t.parentNode.insertBefore(s, t);
-							function trackVisitor7257335000001002261(){
 								try{
-									if ($zoho) {
-										var LDTuvidObj = document.forms['WebToLeads7257335000001002261'] ['LDTuvid'];
-										if (LDTuvidObj) {
-											LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
-										}
-										var firstnameObj = document.forms['WebToLeads7257335000001002261'] ['First Name'];
-										if (firstnameObj) {
-											name = firstnameObj.value + ' ' + name;
-										}
-										$zoho.salesiq.visitor.name(name);
-										var emailObj = document.forms['WebToLeads7257335000001002261'] ['Email'];
-										if (emailObj) {
-											email = emailObj.value;
-											$zoho.salesiq.visitor.email(email);
-										}
+									if (fieldObj.name == 'Last Name') {
+										name = fieldObj.value;
 									}
 								} catch (e){}
 							}
-						</script>
-						<!-- Do not remove this --- Analytics Tracking code starts -->
-						<script id = 'wf_anal' src = 'https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=e6ba5ccebe43ecb564b2a6612f98f02e360a7cb2eda8f0454a3bd7e89a5e420280d916d5e1ef957262fed034108148c4gid84a90b3af2d7eb47e18e785f1c78f105057a58cbd815f2c0de6f68f5810a7cc7gid4b836776a3a76dade3d36b7c385853b8d0664ae63c254ee0fe5ebab258b06854gidd094b953e9fd83ec00e1813c9308bff6291c1697bba3aab03eab58afad249f97&tw=cb02857a2df8ff3093c3bdc76e1b5fd0ebedfe737acc73493e047dff5852a801'>
-					</script>
-					<!-- Do not remove this --- Analytics Tracking code ends. -->
-                    <script>
-                        function getUTMParameter(name) {
-                          const urlParams = new URLSearchParams(window.location.search);
-                          return urlParams.get(name);
-                        }
-                        
-                        window.onload = function() {
-                          if(getUTMParameter('utm_source')){
-                            document.getElementById('LEADCF4').value = getUTMParameter('utm_source');
-                          }
-                        
-                          if(getUTMParameter('utm_medium')){
-                            document.getElementById('LEADCF6').value = getUTMParameter('utm_medium');
-                          }
-                        
-                          if(getUTMParameter('utm_campaign')){
-                            document.getElementById('LEADCF3').value = getUTMParameter('utm_campaign');
-                          }
-                        
-                          if(getUTMParameter('utm_content')){
-                            document.getElementById('LEADCF5').value = getUTMParameter('utm_content');
-                          }
-                        
-                          if(getUTMParameter('utm_term')){
-                            document.getElementById('LEADCF7').value = getUTMParameter('utm_term');
-                          }
-                        };
-                    </script>
-				</form>
-			</div>
-
+						}
+						trackVisitor67135000000372003();
+						if ( !validateEmail67135000000372003 () ) {
+							return false;
+						}
+						var urlparams = new URLSearchParams(window.location.search);
+						if (urlparams.has ('service') && (urlparams.get ('service') === 'smarturl') ) {
+							var webform = document.getElementById('webform67135000000372003');
+							var service = urlparams.get('service');
+							var smarturlfield = document.createElement('input');
+							smarturlfield.setAttribute('type', 'hidden');
+							smarturlfield.setAttribute('value', service);
+							smarturlfield.setAttribute('name', 'service');
+							webform.appendChild(smarturlfield);
+						}
+						document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+						return true;
+					}
+					$(
+					document).ready(function(){
+						$(
+						'#webform67135000000372003').submit(function(e){
+							var ismandatory = checkMandatory67135000000372003();
+							e.preventDefault();
+							if (ismandatory) {
+								if (typeof _wfa_track != 'undefined' && _wfa_track.wfa_submit) {
+									_wfa_track.wfa_submit(e);
+								}
+								var formData = new FormData(this );
+								$.ajax({
+									url: 'https://crm.zohocloud.ca/crm/WebToLeadForm',
+									type: 'POST',
+									data: formData,
+									cache: false,
+									contentType: false,
+									processData: false,
+									success: function(data){
+										var splashinfodom = document.getElementById('wf_splash_info');
+										splashinfodom.innerText = data.actionvalue;
+										var splashdom = document.getElementById('wf_splash');
+										document.getElementById('webform67135000000372003').reset.click();
+										splashdom.style.display = '';
+										setTimeout(function(){
+											splashdom.style.display = 'none';
+										},
+										5000);
+										document.querySelector('.crmWebToEntityForm .formsubmit').removeAttribute('disabled');
+									},
+									error: function(data){
+										alert('an error occurred');
+									}
+								});
+							}
+						});
+					});
+					function tooltipShow67135000000372003(el){
+						var tooltip = el.nextElementSibling;
+						var tooltipDisplay = tooltip.style.display;
+						if (tooltipDisplay == 'none') {
+							var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+							for (i = 0; i < allTooltip.length; i++ ) {
+								allTooltip[i].style.display = 'none';
+							}
+							tooltip.style.display = 'block';
+						} else {
+							tooltip.style.display = 'none';
+						}
+					}
+				</script>
+				<script type = 'text/javascript' id = 'VisitorTracking'>
+					var $zoho = $zoho || {};
+					$zoho.salesiq = $zoho.salesiq || {
+						widgetcode: 'd50adc720e6776fcdf6b5c569c0b1b6c4b2daaa7c7711bebb6242cf5e1d3592c263715371003d166d96336faacde665d',
+						values: {},
+						ready: function(){}
+					};
+					var d = document;
+					s = d.createElement('script');
+					s.type = 'text/javascript';
+					s.id = 'zsiqscript';
+					s.defer = true;
+					s.src = 'https://salesiq.zohocloud.ca/widget';
+					t = d.getElementsByTagName('script')[0];
+					t.parentNode.insertBefore(s, t);
+					function trackVisitor67135000000372003(){
+						try{
+							if ($zoho) {
+								var LDTuvidObj = document.forms['WebToLeads67135000000372003'] ['LDTuvid'];
+								if (LDTuvidObj) {
+									LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
+								}
+								var firstnameObj = document.forms['WebToLeads67135000000372003'] ['First Name'];
+								if (firstnameObj) {
+									name = firstnameObj.value + ' ' + name;
+								}
+								$zoho.salesiq.visitor.name(name);
+								var emailObj = document.forms['WebToLeads67135000000372003'] ['Email'];
+								if (emailObj) {
+									email = emailObj.value;
+									$zoho.salesiq.visitor.email(email);
+								}
+							}
+						} catch (e){}
+					}
+				</script>
+				<!-- Do not remove this --- Analytics Tracking code starts -->
+				<script id = 'wf_anal' src = 'https://crm.zohopublic.ca/crm/WebFormAnalyticsServeServlet?rid=2b52131af2b54fecbd0ed676bbb3801d5b8b022c1b290c6a03420291e3e70f862f1ff65182dbfd1a6adf5783111e4937gideb8703c6e749d3ea8ac217fd3edb958c20ad14dfada8b50502b9c72d6d2afd23gid8d2546abecda438b6bd0d1dc1d4ea988ff40879742d700234722f3501f940a7cgid1e5a7d03ae2ca03899112cdbca1acddb57b63aba9ae28fb637f5c7548aee35a6&tw=e8f29df9fe711a332e36b1c4187edce39940928e68672b111dd6294421811fd7'>
+			</script>
+			<!-- Do not remove this --- Analytics Tracking code ends. -->
+			<script>
+				function getUTMParams() {
+				    const params = new URLSearchParams(window.location.search);
+				
+				    // Map URL params to Zoho fields
+				    const utmFields = {
+				        utm_source: 'LEADCF5',
+				        utm_medium: 'LEADCF4',
+				        utm_campaign: 'LEADCF7',
+				        utm_content: 'LEADCF6',
+				        utm_term: 'LEADCF9'
+				    };
+				
+				    for (let param in utmFields) {
+				        if (params.has(param)) {
+				            const field = document.getElementById(utmFields[param]);
+				            if (field) {
+				                field.value = params.get(param);
+				            }
+				        }
+				    }
+				}
+				
+				// Run when page loads
+				document.addEventListener("DOMContentLoaded", getUTMParams);
+			</script>
+		</form>
+	</div>
 </body>
 </html>
